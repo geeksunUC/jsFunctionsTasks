@@ -1,4 +1,4 @@
-// Arrow function calcAverage
+/* // Arrow function calcAverage
 const calcAverage = (score1 , score2, score3) => {
   return (score1 + score2 + score3) / 3;
 }
@@ -21,5 +21,28 @@ let checkWinner = function(avgDolphins, avgKoalas){
 avgDolphins = Math.round(calcAverage(85, 54, 41));
 avgKoalas =  Math.round(calcAverage(23, 34, 27));
 
+checkWinner(avgDolphins, avgKoalas); */
 
-checkWinner(avgDolphins, avgKoalas);
+/// Coding Challenge #3
+"use strict"
+// All code in this file will run in strict mode
+// -1- function calcTip
+const calcTip = bill => {
+  if(bill >= 50 && bill <= 300) return bill * 0.15;
+  else return bill * 0.2;
+}
+console.log("tip calculated" + calcTip(100));
+
+// -2- array bill 
+let billArray = [125, 555, 44];
+// -3- Tips calculated from the function below
+let tips = [calcTip(billArray[0]), calcTip(billArray[1]), calcTip(billArray[2])]
+for(let i = 0 ;  i < tips.length; i++) {
+  console.log(tips[i]);
+}
+// -4- Bonus
+const total = [];
+for( let i = 0 ; i < tips.length ; i++){
+   total.push(tips[i] + billArray[i]) ;
+}
+console.log(total);
